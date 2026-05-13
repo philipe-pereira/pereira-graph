@@ -40,27 +40,27 @@ public class GraphN {
 	/**
 	 * Construtor do grafo
 	 * 
-	 * @param ens arestas do grafo
+	 * @param numberedEdges arestas do grafo
 	 */
-	public GraphN(Set<DuplaEmeio> ens) {
-		this.setEns(ens);
+	public GraphN(Set<DuplaEmeio> numberedEdges) {
+		this.setEdges(numberedEdges);
 	}
 
-	public GraphN(Collection<? extends EdgeN> ens) {
+	public GraphN(Collection<? extends EdgeN> numberedEdges) {
 		HashSet<DuplaEmeio> es = new HashSet<>();
-		for (EdgeN e : ens)
-			es.add(e.getNums());
-		this.setEns(es);
+		for (EdgeN numberedEdge : numberedEdges)
+			es.add(numberedEdge.getNums());
+		this.setEdges(es);
 	}
 
 	// -------------- getter's n setter's --------------
 
-	protected void setEns(Set<DuplaEmeio> ens) {
-		if (ens == null)
+	protected void setEdges(Set<DuplaEmeio> numberedEdges) {
+		if (numberedEdges == null)
 			new IllegalArgumentException("Grafo não pode ser nulo");
 		this.ens = new HashMap<DuplaEmeio, EdgeN>();
 		this.isolated = new HashSet<>();
-		for (DuplaEmeio d : ens)
+		for (DuplaEmeio d : numberedEdges)
 			add(d);
 	}
 

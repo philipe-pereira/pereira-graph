@@ -7,6 +7,13 @@ import java.util.Map;
 import br.com.pereiraeng.graph.Vertex;
 import br.com.pereiraeng.graph.VertexObject;
 
+/**
+ * Interface que indica que um dado objeto pode ser representado como um vértice
+ * numerado i.e. que pode ser identificado de maneira unívoca por um número
+ * inteiro
+ * 
+ * @author Philipe PEREIRA
+ */
 public interface VertexN extends Vertex {
 
 	/**

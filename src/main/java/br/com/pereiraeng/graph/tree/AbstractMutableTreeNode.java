@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import java.util.Stack;
 import java.util.Vector;
 
+import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.MutableTreeNode;
 import javax.swing.tree.TreeNode;
 

@@ -6,10 +6,10 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import br.com.pereiraeng.core.collections.set.FixPosSet;
 import br.com.pereiraeng.graph.GraphUtils;
 import br.com.pereiraeng.graph.Vertex;
 import br.com.pereiraeng.math.DuplaEmeio;
-import br.com.pereiraeng.core.collections.set.FixPosSet;
 
 /**
  * Classe dos objetos que representam um conjunto de {@link DuplaEmeio arestas}

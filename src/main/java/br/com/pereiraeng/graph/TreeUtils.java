@@ -18,10 +18,10 @@ import java.util.TreeMap;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
 
-import br.com.pereiraeng.graph.tree.AbstractMutableTreeNode;
-import br.com.pereiraeng.graph.tree.PrimitiveMutableTreeNode;
 import br.com.pereiraeng.core.StringUtils;
 import br.com.pereiraeng.core.collections.ArrayUtils;
+import br.com.pereiraeng.graph.tree.AbstractMutableTreeNode;
+import br.com.pereiraeng.graph.tree.PrimitiveMutableTreeNode;
 
 /**
  * Função de manipulação de árvore: grafos radiais

@@ -5,8 +5,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import br.com.pereiraeng.math.DuplaEmeio;
 import br.com.pereiraeng.core.DisplayableFields;
+import br.com.pereiraeng.math.DuplaEmeio;
 
 /**
  * Classe que representa o {@link VertexObject vértice de um grafo} que contém

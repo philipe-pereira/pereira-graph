@@ -7,7 +7,6 @@ import java.util.Set;
  * como um subgrafo que se interliga diversos vértices (seria como se fosse uma
  * 'super-aresta' que ao invés de se ligar a dois vértices, liga-se a vários,
  * segundo uma dada topologia)
- * <p>
  * 
  * Ver mais detalhes em
  * <a href="https://en.wikipedia.org/wiki/Hypergraph">Hipergrafo</a>.

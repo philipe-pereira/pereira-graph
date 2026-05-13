@@ -25,8 +25,7 @@ public class GraphUtils {
 	/**
 	 * Função que retorna a relação de todas as arestas a partir dos vértices
 	 * 
-	 * @param vs
-	 *            vértices
+	 * @param vs vértices
 	 * @return arestas
 	 */
 	public static Collection<Edge> getEdges(Collection<? extends Vertex> vs) {
@@ -45,10 +44,8 @@ public class GraphUtils {
 	/**
 	 * Função que retorna a relação de arestas que ligam dois vértices
 	 * 
-	 * @param v1
-	 *            um vértice
-	 * @param v2
-	 *            outro vértice
+	 * @param v1 um vértice
+	 * @param v2 outro vértice
 	 * @return relação de arestas entre dois vértices
 	 */
 	public static Collection<? extends Edge> getEdges(Vertex v1, Vertex v2) {
@@ -65,11 +62,10 @@ public class GraphUtils {
 	/**
 	 * Função que constrói um grafo a partir de uma tabela de conexões
 	 * 
-	 * @param conns
-	 *            tabela de dispersão que associa para cada aresta seus vértices
-	 *            (tanto as arestas quanto os vértices são representados pelos
-	 *            objetos que neles serão inseridos). O número de entradas dessa
-	 *            tabela é igual ao número de arestas.
+	 * @param conns tabela de dispersão que associa para cada aresta seus vértices
+	 *              (tanto as arestas quanto os vértices são representados pelos
+	 *              objetos que neles serão inseridos). O número de entradas dessa
+	 *              tabela é igual ao número de arestas.
 	 * @return tabela de dispersão que associa para cada objeto do vértice o próprio
 	 *         vértices (o conjunto de vértices define o grafo). O número de
 	 *         entradas dessa tabela é igual ao número de vértices.
@@ -99,11 +95,10 @@ public class GraphUtils {
 	 * Função que constrói um grafo a partir de uma matriz com N linhas e 2 (ou 3)
 	 * colunas, onde N é o número de arestas
 	 * 
-	 * @param edges
-	 *            matriz em que cada linha representa uma aresta, sendo que nas duas
-	 *            primeiras colunas estão os objetos que serão inseridos nos
-	 *            vértices e na terceira coluna (caso existir) estará o objeto que
-	 *            será inserido na aresta
+	 * @param edges matriz em que cada linha representa uma aresta, sendo que nas
+	 *              duas primeiras colunas estão os objetos que serão inseridos nos
+	 *              vértices e na terceira coluna (caso existir) estará o objeto que
+	 *              será inserido na aresta
 	 * @return relação de vértices (que define o grafo)
 	 */
 	public static Collection<VertexObject> buildGraph(Object[][] edges) {
@@ -135,9 +130,8 @@ public class GraphUtils {
 	 * considerado como sendo a raiz. O percurso é feito em profundidade
 	 * (depth-first search).
 	 * 
-	 * @param v
-	 *            objeto {@link Vertex vértice} a partir do qual se iniciará o
-	 *            percurso
+	 * @param v objeto {@link Vertex vértice} a partir do qual se iniciará o
+	 *          percurso
 	 * @return conjunto de nó visitados
 	 */
 	public static Set<Vertex> dfs(Vertex v) {
@@ -151,11 +145,9 @@ public class GraphUtils {
 	 * considerado como sendo a raiz. O percurso é feito em profundidade
 	 * (depth-first search).
 	 * 
-	 * @param v
-	 *            objeto {@link Vertex vértice} a partir do qual se iniciará o
-	 *            percurso
-	 * @param discovered
-	 *            nós já visitados e que não o serão de novo
+	 * @param v          objeto {@link Vertex vértice} a partir do qual se iniciará
+	 *                   o percurso
+	 * @param discovered nós já visitados e que não o serão de novo
 	 */
 	private static void dfs(Vertex v, Set<Vertex> discovered) {
 		if (discovered == null)
@@ -171,17 +163,10 @@ public class GraphUtils {
 		}
 	}
 
-	// monta uma árvore
-
 	// ======================== breadth-first search ========================
 
 	// retorna os nós visitados
 
-	/**
-	 * 
-	 * @param v
-	 * @return
-	 */
 	public static Set<Vertex> bfs(Vertex v) {
 		Set<Vertex> out = new LinkedHashSet<>();
 		bfs(v, out);
@@ -237,10 +222,8 @@ public class GraphUtils {
 	 * Função que retorna um possível caminho, composto por dois ou mais arestas,
 	 * ligando dois vértices
 	 * 
-	 * @param part
-	 *            vértice de partida
-	 * @param dest
-	 *            vértice de chegada
+	 * @param part vértice de partida
+	 * @param dest vértice de chegada
 	 * @return caminho ligando os vértices
 	 */
 	public static GraphPath bfs(Vertex part, Vertex dest) {
@@ -250,14 +233,11 @@ public class GraphUtils {
 	/**
 	 * Função que retorna um possível caminho ligando dois vértices
 	 * 
-	 * @param part
-	 *            vértice de partida
-	 * @param dest
-	 *            vértice de chegada
-	 * @param forbidden
-	 *            arestas proibidas (i.e., que não poderão compor o caminho)
-	 * @param minimum
-	 *            número de arestas a partir do qual o caminho passa a ser válido
+	 * @param part      vértice de partida
+	 * @param dest      vértice de chegada
+	 * @param forbidden arestas proibidas (i.e., que não poderão compor o caminho)
+	 * @param minimum   número de arestas a partir do qual o caminho passa a ser
+	 *                  válido
 	 * @return caminho ligando os vértices
 	 */
 	protected static GraphPath bfs(Vertex part, Vertex dest, Set<Edge> forbidden, int minimum) {
@@ -354,12 +334,9 @@ public class GraphUtils {
 	/**
 	 * Função que retorna o conjunto de todos os caminhos de um vértice para outros
 	 * 
-	 * @param from
-	 *            vértice de partida
-	 * @param dests
-	 *            destinos possíveis
-	 * @param forbidden
-	 *            vértice já visitados e que não o serão de novo
+	 * @param from      vértice de partida
+	 * @param dests     destinos possíveis
+	 * @param forbidden vértice já visitados e que não o serão de novo
 	 * @return conjunto de caminhos até os vértices indicados
 	 */
 	public static Set<GraphPath> bfs(Vertex from, Collection<? extends Vertex> dests, Set<? extends Vertex> forbidden) {
@@ -403,12 +380,9 @@ public class GraphUtils {
 	/**
 	 * Função que retorna o conjunto de todos os caminhos de um vértice para outros
 	 * 
-	 * @param dests
-	 *            destinos possíveis
-	 * @param from
-	 *            vértice de partida
-	 * @param forbidden
-	 *            arestas que não podem ser utilizadas
+	 * @param dests     destinos possíveis
+	 * @param from      vértice de partida
+	 * @param forbidden arestas que não podem ser utilizadas
 	 * @return conjunto de caminhos até os vértices indicados
 	 */
 	public static Set<GraphPath> bfs(Collection<? extends Vertex> dests, Vertex from, Set<? extends Edge> forbidden) {
@@ -427,10 +401,9 @@ public class GraphUtils {
 	 * @param trace
 	 * @param forbidden
 	 * @param out
-	 * @param max
-	 *            número máximo de caminhos abertos entre os dois nós (em grafos
-	 *            fortemente conectados, este valor impede que um número
-	 *            combinatorial elevado de caminhos sejam produzidos)
+	 * @param max        número máximo de caminhos abertos entre os dois nós (em
+	 *                   grafos fortemente conectados, este valor impede que um
+	 *                   número combinatorial elevado de caminhos sejam produzidos)
 	 */
 	private static void bfs(Vertex from, Collection<? extends Vertex> dests, Set<Vertex> discovered, GraphPath trace,
 			Set<? extends Edge> forbidden, Set<GraphPath> out, final int max) {
@@ -595,8 +568,7 @@ public class GraphUtils {
 	 * Função que remove de todos os vértices as arestas que apontam para vértices
 	 * que foram eventualmente removidos do grafo
 	 * 
-	 * @param vs
-	 *            grafo
+	 * @param vs grafo
 	 */
 	public static void forceConnectivity(Collection<? extends Vertex> vs) {
 		Map<Edge, Vertex> rem = new HashMap<>();
